@@ -11,17 +11,17 @@ const ChefDetails = () => {
   const { image_url, likes, name, experience, recipes } = chefDetails.recipes;
   return (
     <div>
-      <div className="flex items-center my-10 gap-5">
+      <div className="flex items-center my-10 gap-5 px-20">
         <img className=" w-96 rounded-lg" src={chefDetails.image_url} alt="" />
         <div className="py-10 px-20">
           <h2 className=" text-2xl font-semibold text-left">
             {chefDetails.name}
           </h2>
-          <p className=" text-left py-3">{chefDetails.description}</p>
+          <p className=" text-xl text-left py-3">{chefDetails.description}</p>
           <div className=" flex gap-4">
             <p className=" ">
               Likes :{" "}
-              <span className=" bg-orange-500 rounded-lg text-white">
+              <span className=" bg-orange-500 p-2 rounded-lg text-white">
                 {chefDetails.likes}
               </span>
             </p>
@@ -31,7 +31,7 @@ const ChefDetails = () => {
         </div>
       </div>
 
-      <div className="grid text-left  ">
+      <div className="grid text-left px-5 ">
         {chefDetails.recipes.map((chef) => (
           <ChefSingleCard  key={chef.recipe_name} chef={chef} > </ChefSingleCard>
         ))}
