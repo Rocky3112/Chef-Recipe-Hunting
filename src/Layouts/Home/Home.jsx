@@ -6,6 +6,7 @@ import "./Home.css";
 import FoodReview from "./FoodReview";
 import FoodContactSection from "./FoodContactSection";
 import LazyLoad from "react-lazy-load";
+import BestItem from "./BestItem";
 
 const Home = () => {
   const chefData = useLoaderData();
@@ -41,13 +42,16 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="py-5">
+        <BestItem></BestItem>
+      </div>
 
       {/* for card display */}
 
       <div className="mx-5">
-        <div className=" grid lg:grid-cols-3 gap-5 mt-16">
+        <div className=" grid lg:grid-cols-3 gap-5 mt-16 ">
           {chefData.map((chef) => (
-            <div className="grid-container" key={chef.id}>
+            <div className="grid-container transition-transform duration-300  hover:scale-110" key={chef.id}>
               <div className="rounded-lg w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                   <LazyLoad height={200} debounce={false} offsetVertical={700}>
