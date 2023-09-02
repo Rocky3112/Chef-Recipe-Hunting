@@ -49,6 +49,9 @@ const Home = () => {
       {/* for card display */}
 
       <div className="mx-5">
+      <h2 className="text-3xl text-center font-semibold py-4">
+                Our Items
+            </h2>
         <div className=" grid lg:grid-cols-3 gap-5 mt-16 ">
           {chefData.map((chef) => (
             <div className="grid-container transition-transform duration-300  hover:scale-110" key={chef.id}>
